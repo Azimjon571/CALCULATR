@@ -11,7 +11,7 @@ else if(firstNumber<secondNumber)
 {
     System.Console.WriteLine("2nd number greater than 1st number");
 }
-else if (firstNumber==secondNumber)
+else
 {
     System.Console.WriteLine("1st number equal to the 2nd number");
 }
