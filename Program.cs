@@ -1,5 +1,7 @@
 ﻿System.Console.Write("Type 1st number: ");
 int firstNumber = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Enter operation(+, -, *, /, %");
+string operation = Console.ReadLine();
 System.Console.Write("Type 2nd number: ");
 int secondNumber = Convert.ToInt32(Console.ReadLine());
 
@@ -23,4 +25,26 @@ else if(firstNumber<secondNumber)
 else
 {
     System.Console.WriteLine("1st number equal to the 2nd number");
+}
+
+switch(operation)
+{
+    case "+":
+        System.Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
+        break;
+    case "-":
+        System.Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
+        break;
+    case "*":
+        System.Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
+        break;
+    case "/":
+        System.Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
+        break;
+    case "%":
+        System.Console.WriteLine($"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
+        break;
+    default:
+        System.Console.WriteLine("Operation not Found!");
+        break;
 }
