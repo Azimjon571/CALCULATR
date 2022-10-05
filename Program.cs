@@ -27,24 +27,35 @@ else
     System.Console.WriteLine("1st number equal to the 2nd number");
 }
 
-switch(operation)
+string result = operation switch
 {
-    case "+":
-        System.Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
-        break;
-    case "-":
-        System.Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
-        break;
-    case "*":
-        System.Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
-        break;
-    case "/":
-        System.Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
-        break;
-    case "%":
-        System.Console.WriteLine($"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
-        break;
-    default:
-        System.Console.WriteLine("Operation not Found!");
-        break;
-}
+    "+" => $"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}",
+    "-" => $"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}",
+    "*" => $"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}",
+    "/" => $"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}",
+    "%" => $"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}",
+    _  => "Operation not Found!"
+};
+System.Console.WriteLine(result);
+
+//switch(operation)
+//{
+//    case "+":
+//        System.Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
+//        break;
+//    case "-":
+//        System.Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
+//        break;
+//    case "*":
+//        System.Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
+//        break;
+//    case "/":
+//        System.Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
+//        break;
+//   case "%":
+//        System.Console.WriteLine($"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
+//        break;
+//    default:
+//        System.Console.WriteLine("Operation not Found!");
+//        break;
+//}
