@@ -38,24 +38,7 @@ string result = operation switch
 };
 System.Console.WriteLine(result);
 
-//switch(operation)
-//{
-//    case "+":
-//        System.Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
-//        break;
-//    case "-":
-//        System.Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
-//        break;
-//    case "*":
-//        System.Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
-//        break;
-//    case "/":
-//        System.Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
-//        break;
-//   case "%":
-//        System.Console.WriteLine($"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
-//        break;
-//    default:
-//        System.Console.WriteLine("Operation not Found!");
-//        break;
-//}
+for(int i = 1; i<=10; i++)
+{
+    System.Console.WriteLine($"{firstNumber}x{i}={firstNumber*i}");
+}
