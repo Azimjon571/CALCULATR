@@ -5,30 +5,33 @@ namespace Calculate.Classes
         public int FirstNumber { get; set; }
         public int SecondNumber { get; set; }
         public string Operation { get; set; }
-        public Calculated(int firstNumber, int secondNumber, string operation )
+        public void GetInputs()
         {
-            firstNumber=FirstNumber;
-            secondNumber=SecondNumber;
-            Operation=operation;
+            System.Console.Write("Type 1st number: ");
+            FirstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter operation(+, -, *, /, %");
+            Operation = Console.ReadLine();
+            Console.Write("Type 2nd number: ");
+            SecondNumber = Convert.ToInt32(Console.ReadLine());
         }
-        public void PositiveOrNegetive(int firstNumber)
+        public void PositiveOrNegetive()
         {
             string message = 
-                 firstNumber >= 0 
-                    ? "First numbeer is positive" 
+                 FirstNumber >= 0 
+                    ? "First number is positive" 
                     : "First number is negative";
 
             Console.WriteLine(message);
 
         }
 
-        public void CompareNumbers(int firstNumber, int secondNumber)
+        public void CompareNumbers()
         {
-            if(firstNumber>secondNumber)
+            if(FirstNumber>SecondNumber)
             {
                 Console.WriteLine("1st number greater than 2nd number");
             }
-            else if(firstNumber<secondNumber)
+            else if(FirstNumber<SecondNumber)
             {
                 Console.WriteLine("2nd number greater than 1st number");
             }
@@ -38,24 +41,24 @@ namespace Calculate.Classes
             }
         }
 
-        public void calculateNumbers(int firstNumber, int secondNumber)
+        public void calculateNumbers()
         {
             string result = Operation switch
                 {
-                    "+" => $"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}",
-                    "-" => $"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}",
-                    "*" => $"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}",
-                    "/" => $"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}",
-                    "%" => $"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}",
+                    "+" => $"{FirstNumber} + {SecondNumber} = {FirstNumber + SecondNumber}",
+                    "-" => $"{FirstNumber} - {SecondNumber} = {FirstNumber - SecondNumber}",
+                    "*" => $"{FirstNumber} * {SecondNumber} = {FirstNumber * SecondNumber}",
+                    "/" => $"{FirstNumber} / {SecondNumber} = {FirstNumber / SecondNumber}",
+                    "%" => $"{FirstNumber} % {SecondNumber} = {FirstNumber % SecondNumber}",
                     _  => "Operation not Found!"
                 };
             Console.WriteLine(result);
         }
-        public void CalculateTimeToTime(int firstNumber)
+        public void CalculateTimeToTime()
         {
             for(int i = 1; i<=10; i++)
                 {
-                    Console.WriteLine($"{firstNumber}x{i}={firstNumber*i}");
+                    Console.WriteLine($"{FirstNumber}x{i}={FirstNumber*i}");
                 }
         }
     }
